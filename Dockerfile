@@ -8,14 +8,11 @@ RUN apt-get update \
       git \
       make
 
+COPY . /
+
 RUN pip install pipenv
 
 RUN pipenv install
-
-COPY entrypoint.sh /entrypoint.sh
-COPY . /action/
-
-RUN which python
 
 RUN chmod +x entrypoint.sh
 
