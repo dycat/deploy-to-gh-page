@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world
         id: hello
-        uses: dycat/deploy-to-gh-page@v0.1
+        uses: dycat/deploy-to-gh-page@v0.2
         with:
           who-to-greet: "Mona"
       # Use the output from the `hello` step
