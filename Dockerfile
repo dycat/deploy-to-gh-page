@@ -15,11 +15,9 @@ RUN pipenv install
 COPY entrypoint.sh /entrypoint.sh
 COPY . /action/
 
-WORKDIR /action
-
 RUN which python
 
 RUN chmod +x entrypoint.sh
 
 # Build project and push output to gh-pages
-ENTRYPOINT ["./entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
