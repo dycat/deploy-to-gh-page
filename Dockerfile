@@ -8,7 +8,7 @@ RUN apt-get update \
       git \
       make
 
-COPY . /
+COPY . .
 
 RUN pip install pipenv
 
