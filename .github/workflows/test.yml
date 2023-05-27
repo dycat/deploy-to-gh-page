@@ -1,19 +1,18 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  test-build:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
       # Checkout code
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Hello world
-        id: hello
+      - name: Build the test project
+        id: build
         uses: ./
         with:
           source: ./test_projects/hello/
-          who-to-greet: "Mona"
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: Verify output
+        run: | 
+          ls ./test_projects/hello/output
