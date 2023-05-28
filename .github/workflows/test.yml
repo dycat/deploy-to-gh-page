@@ -21,4 +21,4 @@ jobs:
         with:
           name: dist-without-markdown
           path: |
-            output
+            $GITHUB_WORKSPACE/output
