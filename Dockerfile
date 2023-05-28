@@ -12,11 +12,7 @@ COPY . .
 
 RUN pip install pipenv
 
-RUN pipenv install pelican
-
 RUN chmod +x entrypoint.sh
-
-RUN which pipenv
 
 # Build project and push output to gh-pages
 ENTRYPOINT ["/entrypoint.sh"]
