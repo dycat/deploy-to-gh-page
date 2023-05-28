@@ -3,7 +3,7 @@
 # OUTPUTDIR=$(BASEDIR)/output
 
 build:
-	docker build -t ghpage .
+	docker build -v -t ghpage .
 
 rm:
 	docker rm ghpage
