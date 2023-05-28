@@ -13,12 +13,14 @@ jobs:
         uses: ./
         with:
           source: test_projects/hello
-      # - name: Verify output
-      #   run: | 
-      #     ls ${GITHUB_WORKSPACE}/test_projects/hello/output
-      - name: Archive production artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: dist-without-markdown
-          path: |
-            $GITHUB_WORKSPACE/output
+      - name: Verify output
+        run: | 
+          ls
+          pwd
+      # ls ${GITHUB_WORKSPACE}/test_projects/hello/output
+      # - name: Archive production artifacts
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: dist-without-markdown
+      #     path: |
+      #       $GITHUB_WORKSPACE/output
