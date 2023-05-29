@@ -9,4 +9,4 @@ pipenv install
 
 echo "Generate the site $SOURCE_DIR with config $CONFIG_DIR"
 
-pipenv run pelican $SOURCE_DIR -s $CONFIG_DIR -o $OUTPUT_DIRs
+pipenv run pelican $SOURCE_DIR -s $CONFIG_DIR -o $OUTPUT_DIR
